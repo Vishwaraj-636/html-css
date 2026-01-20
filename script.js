@@ -1,5 +1,17 @@
-addEventListener("mousemove",function (i){
-   console.log(i.clientX,i.clientY)
-   document.body.style.setProperty("--x",i.clientX+"px")
-   document.body.style.setProperty("--y",i.clientY+"px")
-});
+var para = document.querySelector("p")
+const chars="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+const text = para.innerHTML
+
+var iter=0
+function randomTxt(){
+    const str = text.split("").map((char,idx)=>{
+        if(idx<iter){
+            return char
+        }
+        return chars.split("")[Math.floor(Math.random()*53)]
+    }).join("")
+    para.innerHTML=str
+    iter+=0.35
+}
+
+setInterval(randomTxt,30)
