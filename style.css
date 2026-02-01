@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: whitesmoke;
 }
 html,body{
     height: 100%;
@@ -15,9 +15,36 @@ body{
     align-items: center;
     justify-content: center;
 }
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
 
-p{
-    font-size: 3rem;
-    color: rgb(255, 255, 255); 
-    font-family: monospace
+@keyframes borderRotate{
+    from{
+        --rotate: 0deg;
+    }
+    to{
+        --rotate: 360deg;
+    }
+}
+
+.box{
+    
+    max-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background:
+        linear-gradient(black) padding-box,
+        conic-gradient(from var(--rotate), black, #dd0270, black) border-box;
+    animation: borderRotate 4s linear infinite;
+}
+
+.box img{
+    width: 100%;
 }
