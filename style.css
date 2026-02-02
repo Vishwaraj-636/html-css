@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: whitesmoke;
+    font-family:monospace;
+    
 }
 html,body{
     height: 100%;
@@ -32,19 +33,34 @@ body{
 
 .box{
     
+    color: whitesmoke;
     max-width: 300px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: 0 0 0px #ff00c3 ;
     border-radius: 15px;
-    border: 5px solid transparent;
+    border: 0px solid transparent;
+    animation: borderRotate 4s linear infinite paused;
+    text-shadow: 0 0 0px #f269d2;
+    transition: all 0.3s linear;
+}
+.box:hover{
+    text-shadow: 0 0 10px #f269d2;
     background:
         linear-gradient(black) padding-box,
-        conic-gradient(from var(--rotate), black, #dd0270, black) border-box;
-    animation: borderRotate 4s linear infinite;
+        conic-gradient(from var(--rotate), black, rgb(255, 2, 128), black) border-box;
+    border:5px solid transparent;
+    animation-play-state: running;
+    box-shadow: 0 0 30px #ff00c3;
+    color: #ff00c3;
 }
 
 .box img{
     width: 100%;
+}
+
+.box p{
+    font-size: 11px;
 }
