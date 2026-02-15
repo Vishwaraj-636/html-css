@@ -1,66 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:monospace;
-    
-}
-html,body{
-    height: 100%;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@property --rotate{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
-@keyframes borderRotate{
-    from{
-        --rotate: 0deg;
-    }
-    to{
-        --rotate: 360deg;
-    }
+body {
+  color: white;
+  background-color: black;
 }
 
-.box{
-    
-    color: whitesmoke;
-    max-width: 300px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 0 0px #ff00c3 ;
-    border-radius: 15px;
-    border: 0px solid transparent;
-    animation: borderRotate 4s linear infinite paused;
-    text-shadow: 0 0 0px #f269d2;
-    transition: all 0.3s linear;
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.box:hover{
-    text-shadow: 0 0 10px #f269d2;
-    background:
-        linear-gradient(black) padding-box,
-        conic-gradient(from var(--rotate), black, rgb(255, 2, 128), black) border-box;
-    border:5px solid transparent;
-    animation-play-state: running;
-    box-shadow: 0 0 30px #ff00c3;
-    color: #ff00c3;
+main section {
+  height: 50%;
+  width: 50%;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main section h1 {
+  font-family: monospace;
 }
 
-.box img{
-    width: 100%;
+.blue {
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(0, 213, 255);
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
 }
 
-.box p{
-    font-size: 11px;
-}
+.red {
+  padding: 10px;
+  margin: 10px;
+  background-color: red;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */

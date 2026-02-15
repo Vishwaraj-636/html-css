@@ -1,0 +1,43 @@
+@import "button";
+@import "flexCenter";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    color: white;
+    background-color: black;
+}
+
+
+main{
+    height: 100%;
+    width: 100%;
+    @include flex-center();
+    
+    section{
+        height: 50%;
+        width: 50%;
+        background-color: blue;
+        @include flex-center();
+        h1{
+            font-family: monospace;
+        }
+    }
+}
+
+.blue{
+    @include button-style(rgb(0, 213, 255));
+}
+
+.red{
+    @include button-style(red)
+}
